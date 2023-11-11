@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadaten und Verweise auf externe Ressourcen -->
+    <meta charset="utf-8" />
+    <title>Webseite zum Portfolio von Webprogrammierung</title>
+    <link rel="stylesheet" href="styleDetailseite.css">
+    <link rel="stylesheet" href="Responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Einbinden JavaScript -->
+    <script src="details.js"></script>
+    <script src="sucheUndWechsel.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div>
+            <!-- Überschrift im Header -->
+            <h1 class="header-title" id="header"></h1>
+        </div>
+    </header>
+    <main>
+        <!--Zurück Button -->
+        <a href="Webseite.html" class="zurueck-button">Zurück</a>
+        <div class="image-container">
+            <!-- Bild -->
+            <img id="ergebnis-bild" src="" alt="Standardbild">
+        </div>
+            <div class="content">
+                <!-- Tabelle für Informationen zum Fahrer -->
+                <table class="driver-info">
+                    <tbody id="table-body">
+                        <tr>
+                            <td>Nachname:</td>
+                            <td id="cell-famName"></td>
+                        </tr>
+                        <tr>
+                            <td>Vorname:</td>
+                            <td id="cell-givenName"></td>
+                        </tr>
+                        <tr>
+                            <td>Fahrernummer:</td>
+                            <td id="cell-number"></td>
+                        </tr>
+                        <tr>
+                            <td>Kürzel:</td>
+                            <td id="cell-code"></td>
+                        </tr>
+                        <tr>
+                            <td>Wikipedia-Hyperlink:</td>
+                            <td id="cell-link"></td>
+                        </tr>
+                        <tr>
+                            <td>Geburtsdatum:</td>
+                            <td id="cell-dob"></td>
+                        </tr>
+                        <tr>
+                            <td>Nationalität:</td>
+                            <td id="cell-nationality"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+    </main>
+</body>
+
+</html>

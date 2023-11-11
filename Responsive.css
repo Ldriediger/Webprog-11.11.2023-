@@ -1,0 +1,23 @@
+/* Media Query für Bildschirme mit einer maximalen Breite von 768px */
+@media screen and (max-width: 768px) {
+    /* Anpassung des Hintergrundbilds */
+    body {
+      background-image: url(HintergrundbildKlein.jpg);
+      background-repeat: repeat;
+      background-position: center bottom;
+      background-size: cover;
+    }
+    .left-table {
+        display: block;
+        width: auto;
+    }
+    .site-header {
+      padding: 20px 0;
+    }
+
+    .header-title {
+      font-size: 24px;
+    }
+}
+
+

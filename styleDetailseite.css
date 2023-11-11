@@ -1,0 +1,116 @@
+/* Hintergrundbild und grundlegende Styling für den Body */
+html{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100%;
+}
+
+body {
+    background-image: url("HintergrundFahrer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.zurueck-button {
+    position: absolute;
+    text-decoration: none;
+    background-color: #0074D9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.zurueck-button:hover {
+    background-color: #0056a2;
+}
+
+/* Styling für den Header */
+.site-header {
+    background-image: url(Zielflagge.jpg);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    position: relative; 
+}
+
+/* Styling für die Überschrift im Header */
+.header-title {
+    color: 	#FF0000;
+    margin: 0px;
+    font-size: 36px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+/* Styling für den Hauptinhalt und die Tabellenzellen */
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* Styling für die Tabelle */
+table {
+    border: 2px solid #000;
+    border-spacing: 10px;
+    box-shadow: 2px 2px 2px #888;
+    width: 70%;
+    margin: 0 auto; 
+}
+
+/* Styling für Tabellenzellen (TD und TH) */
+td, th {
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styling für den Hauptinhalt */
+.content {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    font: bold;
+    font-size: large;
+}
+
+
+/* Styling für den Bildcontainer */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling für Bilder */
+img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 3px solid #0077FF;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #888;
+    margin: 70px 0px 0px 30px;
+}
+
+/* Styling für die linke Tabelle */
+.left-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Styling für Tabellenzellen in der linken Tabelle */
+.left-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}

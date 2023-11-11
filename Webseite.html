@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadaten und Verweise auf externe Ressourcen -->
+    <meta charset="utf-8" />
+    <title>Webseite zum Portfolio von Webprogrammierung</title>
+    <link rel="stylesheet" href="styleHauptseite.css">
+    <link rel="stylesheet" href="Responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Einbinden Bootstrap-CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <!-- Einbinden Bootstrap-JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Einbinden JavaScript -->
+    <script src="suchvorschläge.js"></script>
+    <script src="sucheUndWechsel.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <!-- Überschrift -->
+            <h6 class="h1">Die Königsklasse des Motorsports</h6>
+        </div>
+    </header>
+    <!-- Hauptinhalt -->
+    <main>
+        <!-- Suchleiste -->
+        <div class="suchleiste">
+            <input type="text" id="search-input" placeholder="Suche nach Formel 1 Fahrern aus dem Jahr 2023...">
+            <button onclick="sucheUndWechsel()" type="button" id="search-button">Suchen</button>
+            <!-- Suchvorschlags-Popup -->
+        <div class="suggestions-popup" id="suggestions">
+            <ul id="suggestionList"></ul>
+        </div>
+        </div>
+        <div class="container-fluid">
+            <!-- Zeilen und Spalten für die Bilder -->
+            <div class="row">
+                <div class="col-md d-flex justify-content-center">
+                    <!-- Bild von Max Verstappen -->
+                    <a onclick="suchbegriff_mitgeben('Max Verstappen')">
+                        <div class="Bildhover">
+                            <img class="Bilder rounded-3" src="MaxVerstappen.jpg" alt="Max Verstappen">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md d-flex justify-content-center">
+                    <!-- Bild von Kevin Magnussen -->
+                    <a onclick="suchbegriff_mitgeben('Kevin Magnussen')">
+                        <div class="Bildhover">
+                            <img class="Bilder rounded-3" src="KevinMagnussen.jpg" alt="Kevin Magnussen">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md d-flex justify-content-center">
+                <!-- Bild von Charles Leclerc -->
+                <a onclick="suchbegriff_mitgeben('Charles Leclerc')">
+                    <div class="Bildhover">
+                        <img class="Bilder rounded-3" src="CharlesLeclerc.jfif" alt="Charles Leclerc">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md d-flex justify-content-center">
+                <!-- Bild von Fernando Alonso -->
+                <a onclick="suchbegriff_mitgeben('Fernando Alonso')">
+                    <div class="Bildhover">
+                        <img class="Bilder rounded-3" src="FernandoAlonso.jpg" alt="Fernando Alonso">
+                    </div>
+                </a>
+            </div>
+        </div>
+        </div>
+        <!-- Popup für Impressum -->
+        <div id="impressum-popup" class="popup">
+            <div class="popup-content">
+                <span id="close-impressum" class="close-popup" onclick="closePopup('impressum-popup')">&times;</span>
+                <h2>Impressum</h2>
+                <!-- Impressumsinformationen -->
+                <p><strong>Firmenname:</strong> Lukas Driediger GmbH</p>
+                <p><strong>Anschrift:</strong> Wallstraße 4, 56249 Herschbach</p>
+                <p><strong>Telefon:</strong> +49 1605675951</p>
+                <p><strong>E-Mail:</strong> lukas.driediger@web.de </p>
+                <p><strong>Vertreten durch:</strong> Lukas Driediger (Geschäftsführer)</p>
+                <p><strong>Registereintrag:</strong> Amtsgericht Montabaur, MB 56410</p>
+                <p><strong>Umsatzsteuer-ID:</strong> DE123456789</p>
+                <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong> Lukas Driediger </p>
+            </div>
+        </div>
+        <!-- Popup für AGB -->
+        <div id="agb-popup" class="popup">
+            <div class="popup-content">
+                <span id="close-agb" class="close-popup" onclick="closePopup('agb-popup')">&times;</span>
+                <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+                <!-- AGB-Informationen -->
+                <p>1. Vertragsgegenstand</p>
+                <p>Dies sind die Allgemeinen Geschäftsbedingungen (AGB) der Lukas Driediger GmbH.</p>
+                <p>2. Vertragsabschluss</p>
+                <p>Der Vertrag kommt durch die Annahme des Angebots des Kunden durch die Lukas Driediger GmbH zustande.</p>
+                <p>3. Preise und Zahlungsbedingungen</p>
+                <p>Die Preise und Zahlungsbedingungen sind wie im Angebot angegeben.</p>
+                <p>4. Liefer- und Versandbedingungen</p>
+                <p>Die Liefer- und Versandbedingungen sind wie im Angebot angegeben.</p>
+                <p>5. Widerrufsrecht</p>
+                <p>Dem Kunden steht ein gesetzliches Widerrufsrecht zu.</p>
+                <p>6. Datenschutz</p>
+                <p>Die Datenschutzerklärung der Lukas Driediger GmbH gilt. Weitere Informationen finden Sie in unserer Datenschutzerklärung.</p>
+                <p>7. Schlussbestimmungen</p>
+                <p>Es gilt deutsches Recht. Gerichtsstand ist Montabaur.</p>
+            </div>
+        </div>
+    </main>
+    <!-- Footer-Bereich -->
+    <footer>
+        <div>
+            <!-- Link zum Impressum -->
+            <a id="impressum-link" href="#impressum-link">Impressum</a>
+        </div>
+        <div>
+            <!-- Link zu den AGB -->
+            <a id="AGB-link" href="#AGB-Link">AGB</a>
+        </div>
+    </footer>
+    <!-- Einbindung JavaScript Popups -->
+    <script src="Popups.js"></script>
+</body>
+
+</html>
